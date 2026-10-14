@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage() {
   const { signIn, loading: authLoading } = useAuth()
   const { showToast } = useToast()
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -22,6 +24,7 @@ export default function LoginPage() {
     try {
       await signIn(email, password)
       showToast('Welcome back!', 'success')
+      navigate('/', { replace: true })
     } catch (err) {
       setError(err.message || 'Invalid credentials')
       showToast('Sign in failed', 'error')
