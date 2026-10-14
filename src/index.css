@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f6fbf4;
+  --color-surface-dim: #d7dbd5;
+  --color-surface-bright: #f6fbf4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f5ee;
+  --color-surface-container: #ebefe8;
+  --color-surface-container-high: #e5e9e3;
+  --color-surface-container-highest: #dfe4dd;
+  --color-on-surface: #181d19;
+  --color-on-surface-variant: #4e4639;
+  --color-inverse-surface: #2d322d;
+  --color-inverse-on-surface: #eef2eb;
+  --color-outline: #7f7667;
+  --color-outline-variant: #d1c5b4;
+  --color-surface-tint: #775a1a;
+  --color-primary: #775a1a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #c6a15b;
+  --color-on-primary-container: #4f3800;
+  --color-inverse-primary: #e9c178;
+  --color-secondary: #3d665a;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #bfecdc;
+  --color-on-secondary-container: #436c5f;
+  --color-tertiary: #576157;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #9fa99d;
+  --color-on-tertiary-container: #353e35;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #ffdea5;
+  --color-primary-fixed-dim: #e9c178;
+  --color-on-primary-fixed: #271900;
+  --color-on-primary-fixed-variant: #5d4202;
+  --color-secondary-fixed: #bfecdc;
+  --color-secondary-fixed-dim: #a4d0c0;
+  --color-on-secondary-fixed: #002019;
+  --color-on-secondary-fixed-variant: #254e42;
+  --color-tertiary-fixed: #dbe5d8;
+  --color-tertiary-fixed-dim: #bfc9bd;
+  --color-on-tertiary-fixed: #151e16;
+  --color-on-tertiary-fixed-variant: #404940;
+  --color-background: #f6fbf4;
+  --color-on-background: #181d19;
+  --color-surface-variant: #dfe4dd;
+}
+
+@theme {
+  --font-admin-display: "Newsreader", serif;
+  --font-admin-body: "Manrope", sans-serif;
+}
+
+@theme {
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@theme {
+  --spacing-space-3xs: 0.125rem;
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xs: 0.375rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 0.75rem;
+  --spacing-space-lg: 1rem;
+  --spacing-space-xl: 1.5rem;
+  --spacing-space-2xl: 2rem;
+  --spacing-space-3xl: 3rem;
+  --spacing-gutter: 1rem;
+  --spacing-gutter-desktop: 1.5rem;
+  --spacing-margin: 1rem;
+  --spacing-margin-tablet: 1.5rem;
+  --spacing-margin-desktop: 2rem;
+}
+
+/* Define custom font utilities as plain CSS classes - available globally */
+.font-label-lg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.font-label-md {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.font-label-sm {
+  font-size: 0.6875rem;
+  line-height: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.font-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.font-headline-lg {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.font-headline-md {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.font-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.font-headline-lg-mobile {
+  font-size: 1.625rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.font-display-lg {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.font-display-lg-mobile {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.font-headline-lg {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.font-headline-md {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.font-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.font-headline-lg-mobile {
+  font-size: 1.625rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.font-tabular-mono {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-family: var(--font-admin-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.font-display-lg {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.font-display-lg-mobile {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.font-headline-lg {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.font-headline-md {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.font-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.font-headline-lg-mobile {
+  font-size: 1.625rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.font-tabular-mono {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-family: var(--font-admin-body);
+  font-variant-numeric: tabular-nums;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-admin-body);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-container);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-outline-variant);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8b0ac;
+  }
+  
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: all 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primary);
+    opacity: 0.9;
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+  
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 1px solid var(--color-outline);
+    color: var(--color-on-surface);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.01em;
+    transition: all 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-surface-container-high);
+  }
+  
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: all 0.2s;
+  }
+  
+  .btn-gold:hover {
+    opacity: 0.9;
+  }
+  
+  .input-field {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-surface-container-low);
+    color: var(--color-on-surface);
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    transition: all 0.2s;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary);
+  }
+  
+  .input-field::placeholder {
+    color: var(--color-on-surface-variant);
+    opacity: 0.7;
+  }
+  
+  .select-field {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-surface-container-low);
+    color: var(--color-on-surface);
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    transition: all 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234e4639' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+  }
+  
+  .select-field:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary);
+  }
+  
+  .card {
+    background-color: var(--color-surface-container-lowest);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-surface-container-highest);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+  
+  .card-hover:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  
+  .badge-new { background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed); }
+  .badge-contacted { background-color: var(--color-secondary-fixed); color: var(--color-on-secondary-fixed); }
+  .badge-interested { background-color: var(--color-tertiary-fixed); color: var(--color-on-tertiary-fixed); }
+  .badge-confirmed { background-color: var(--color-primary-container); color: var(--color-on-primary-container); }
+  .badge-waitlisted { background-color: var(--color-tertiary-container); color: var(--color-on-tertiary-container); }
+  
+  .table-container {
+    background-color: var(--color-surface-container-lowest);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-surface-container-highest);
+    overflow: hidden;
+  }
+  
+  .table-header {
+    background-color: var(--color-surface-container);
+    color: var(--color-on-surface-variant);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .table-row:hover {
+    background-color: var(--color-surface-container-high);
+    background-color: color-mix(in srgb, var(--color-surface-container-high) 40%, transparent);
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  .status-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 9999px;
+  }
+  
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.01em;
+  }
+  
+  .sidebar-link-active {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+    font-weight: 600;
+  }
+  
+  .sidebar-link-inactive {
+    color: var(--color-on-surface-variant);
+  }
+  
+  .sidebar-link-inactive:hover {
+    background-color: var(--color-surface-container-high);
+    color: var(--color-on-surface);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
